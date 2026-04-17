@@ -9,8 +9,8 @@
 :root{
   --bg:#0f172a;--surf:#1e293b;--surf2:#0f172a;--bdr:#334155;
   --txt:#f1f5f9;--mut:#94a3b8;
-  --blue:#3b82f6;--green:#10b981;--yellow:#f59e0b;
-  --purple:#8b5cf6;--pink:#ec4899;--red:#ef4444;--cyan:#06b6d4;
+  --blue:#4393E5;--green:#009E73;--yellow:#E69F00;
+  --purple:#6A5ACD;--pink:#CC79A7;--red:#D55E00;--cyan:#56B4E9;
   --gray:#94a3b8;
 }
 body.light{--bg:#f1f5f9;--surf:#ffffff;--surf2:#f8fafc;--bdr:#e2e8f0;--txt:#1e293b;--mut:#64748b;}
@@ -39,8 +39,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .nav-btn.act-red{background:var(--red);border-color:var(--red);color:#fff;}
 .nav-btn.act-yellow{background:var(--yellow);border-color:var(--yellow);color:#fff;}
 .nav-btn.act-green{background:var(--green);border-color:var(--green);color:#fff;}
-.dash-pill{padding:8px 20px;background:linear-gradient(135deg,#1d4ed8,var(--blue));border:none;border-radius:8px;color:#fff;font-weight:700;font-size:13px;cursor:pointer;}
-.dash-pill.active{outline:3px solid rgba(59,130,246,.5);}
+.dash-pill{padding:8px 20px;background:linear-gradient(135deg,#2563EB,var(--blue));border:none;border-radius:8px;color:#fff;font-weight:700;font-size:13px;cursor:pointer;}
+.dash-pill.active{outline:3px solid rgba(67,147,229,.5);}
 
 /* STATS */
 .stats{max-width:1500px;margin:0 auto 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
@@ -68,7 +68,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .kcol[data-stage=second]{border-top:3px solid var(--purple);}
 .kcol[data-stage=final]{border-top:3px solid var(--pink);}
 .kcol[data-stage=offer]{border-top:3px solid var(--green);}
-.kcol.drag-over{background:rgba(59,130,246,.08);border-style:dashed;border-color:var(--blue);}
+.kcol.drag-over{background:rgba(67,147,229,.08);border-style:dashed;border-color:var(--blue);}
 .kcol-head{padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--bdr);font-weight:700;font-size:13px;flex-shrink:0;}
 .kcol-count{background:var(--surf2);border-radius:12px;padding:2px 9px;font-size:11px;font-weight:700;}
 .kcol-cards{overflow-y:auto;padding:8px;flex:1;display:flex;flex-direction:column;gap:8px;}
@@ -86,9 +86,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .kcard[data-stage=rejected]{border-left:3px solid var(--red);}
 .kcard-co{font-weight:700;font-size:13px;margin-bottom:3px;}
 .kcard-ttl{font-size:11px;color:var(--mut);margin-bottom:8px;}
+.kcard-contact{font-size:10px;color:var(--cyan);margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .kcard-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
 .kcard-tag{font-size:10px;padding:2px 7px;border-radius:10px;background:var(--surf);border:1px solid var(--bdr);}
-.kcard-int{font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(245,158,11,.12);color:var(--yellow);border:1px solid rgba(245,158,11,.25);font-weight:600;}
+.kcard-int{font-size:10px;padding:2px 7px;border-radius:10px;background:rgba(230,159,0,.12);color:var(--yellow);border:1px solid rgba(230,159,0,.25);font-weight:600;}
 
 /* Salesforce-style progress bar */
 .sf-bar{margin-top:7px;}
@@ -108,11 +109,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .tbl-head{display:grid;background:var(--surf2);border-bottom:2px solid var(--bdr);user-select:none;}
 .th{display:flex;align-items:center;gap:4px;padding:11px 10px;font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.4px;cursor:pointer;transition:color .2s;}
 .th:hover{color:var(--blue);}
-.th.col-drag-over{background:rgba(59,130,246,.12);border-radius:4px;}
+.th.col-drag-over{background:rgba(67,147,229,.12);border-radius:4px;}
 .th.col-dragging{opacity:.35;}
 .tbl-row{display:grid;padding:12px 10px;border-bottom:1.5px solid var(--bdr);align-items:center;font-size:13px;cursor:pointer;transition:background .15s;}
 .tbl-row:hover{background:var(--surf2);}
-.tbl-row.sel{background:rgba(59,130,246,.1);}
+.tbl-row.sel{background:rgba(67,147,229,.1);}
 .tc{padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .stage-pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;}
 .qs-badge{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:2px 6px;border-radius:6px;font-size:11px;font-weight:800;color:#fff;}
@@ -175,44 +176,44 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .wl-saved{padding:8px;display:flex;flex-direction:column;gap:7px;}
 
 /* ── OPPORTUNITY FULLSCREEN ── */
-.opp-fs{display:none;position:fixed;inset:0;background:var(--bg);z-index:3000;flex-direction:column;}
-.opp-fs.on{display:flex;}
+.opp-fs{position:fixed;inset:0;background:var(--bg);z-index:3000;flex-direction:column;display:flex;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
+.opp-fs.on{pointer-events:auto;opacity:1;visibility:visible;}
 .opp-tabbar{display:flex;align-items:center;background:var(--surf);border-bottom:1.5px solid var(--bdr);overflow-x:auto;flex-shrink:0;}
 .opp-back{padding:14px 18px;background:none;border:none;border-right:1.5px solid var(--bdr);color:var(--blue);font-weight:700;cursor:pointer;font-size:14px;white-space:nowrap;}
 .opp-back:hover{background:var(--surf2);}
 .opp-tab{padding:13px 18px;background:none;border:none;border-bottom:3px solid transparent;color:var(--mut);font-weight:600;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px;font-size:13px;}
-.opp-tab.active{color:var(--txt);border-bottom-color:var(--blue);background:rgba(59,130,246,.06);}
+.opp-tab.active{color:var(--txt);border-bottom-color:var(--blue);background:rgba(67,147,229,.06);}
 .opp-tab:hover:not(.active){background:var(--surf2);}
 .tab-x{opacity:.4;font-size:17px;line-height:1;transition:opacity .15s;}
 .tab-x:hover{opacity:1;color:var(--red);}
-.opp-body{flex:1;overflow-y:auto;padding:36px 40px;max-width:1100px;margin:0 auto;width:100%;}
-.opp-topbar{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:32px;padding-bottom:24px;border-bottom:1.5px solid var(--bdr);}
-.opp-name{font-size:28px;font-weight:800;margin-bottom:4px;}
-.opp-role{font-size:15px;color:var(--mut);}
-.stage-badge{padding:6px 14px;border-radius:18px;font-size:13px;font-weight:700;color:#fff;}
-.opp-sec{margin-bottom:30px;}
-.opp-sec-title{font-size:10px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:1px;margin-bottom:13px;}
-.opp-g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.opp-g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.opp-body{flex:1;overflow-y:auto;padding:48px 60px;max-width:1400px;margin:0 auto;width:100%;}
+.opp-topbar{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:40px;padding-bottom:28px;border-bottom:1.5px solid var(--bdr);}
+.opp-name{font-size:32px;font-weight:800;margin-bottom:6px;letter-spacing:-.3px;}
+.opp-role{font-size:16px;color:var(--mut);line-height:1.5;}
+.stage-badge{padding:7px 16px;border-radius:18px;font-size:13px;font-weight:700;color:#fff;}
+.opp-sec{margin-bottom:40px;}
+.opp-sec-title{font-size:11px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--bdr);}
+.opp-g2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.opp-g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
 .opp-fld{margin-bottom:0;}
-.opp-lbl{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px;}
-.opp-inp{width:100%;padding:10px 13px;background:var(--surf2);border:1.5px solid var(--bdr);border-radius:8px;color:var(--txt);font-size:14px;outline:none;transition:border .15s;box-sizing:border-box;}
+.opp-lbl{font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;margin-bottom:7px;}
+.opp-inp{width:100%;padding:11px 14px;background:var(--surf2);border:1.5px solid var(--bdr);border-radius:10px;color:var(--txt);font-size:14px;outline:none;transition:border .15s;box-sizing:border-box;}
 .opp-inp:hover,.opp-inp:focus{border-color:var(--blue);}
-textarea.opp-inp{resize:vertical;min-height:90px;}
-.opp-foot{padding:14px 40px;border-top:1.5px solid var(--bdr);display:flex;justify-content:flex-end;gap:8px;background:var(--surf);flex-shrink:0;}
+textarea.opp-inp{resize:vertical;min-height:100px;line-height:1.6;}
+.opp-foot{padding:16px 60px;border-top:1.5px solid var(--bdr);display:flex;justify-content:flex-end;gap:10px;background:var(--surf);flex-shrink:0;}
 
 /* Quality stars */
-.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.q-row-lbl{font-size:12px;font-weight:600;color:var(--mut);margin-bottom:4px;}
-.stars{display:flex;gap:3px;}
-.star{font-size:20px;cursor:pointer;color:var(--bdr);transition:color .12s;}
+.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.q-row-lbl{font-size:12px;font-weight:600;color:var(--mut);margin-bottom:6px;}
+.stars{display:flex;gap:4px;}
+.star{font-size:22px;cursor:pointer;color:var(--bdr);transition:color .12s;}
 .star.on{color:var(--yellow);}
-.q-total{margin-top:12px;padding:11px 14px;background:var(--surf2);border-radius:8px;display:flex;justify-content:space-between;align-items:center;}
-.q-big{font-size:26px;font-weight:800;}
+.q-total{margin-top:16px;padding:14px 18px;background:var(--surf2);border-radius:10px;display:flex;justify-content:space-between;align-items:center;}
+.q-big{font-size:28px;font-weight:800;}
 
 /* ── MODALS ── */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:4000;align-items:center;justify-content:center;}
-.modal-bg.on{display:flex;}
+.modal-bg{display:flex;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:4000;align-items:center;justify-content:center;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
+.modal-bg.on{pointer-events:auto;opacity:1;visibility:visible;}
 .modal-box{background:var(--surf);border-radius:14px;width:90%;max-width:540px;max-height:90vh;overflow-y:auto;}
 .modal-hdr{padding:18px 22px;border-bottom:1.5px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;}
 .modal-hdr h2{font-size:17px;font-weight:700;}
@@ -229,13 +230,229 @@ textarea.opp-inp{resize:vertical;min-height:90px;}
 .m-cancel{padding:9px 20px;background:var(--surf2);border:1.5px solid var(--bdr);border-radius:8px;color:var(--txt);font-weight:600;cursor:pointer;}
 .m-del{padding:9px 20px;background:var(--red);border:none;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;}
 
-/* Time slot buttons */
-.time-slot{padding:8px 6px;background:var(--surf2);border:1.5px solid var(--bdr);border-radius:6px;color:var(--txt);font-weight:600;font-size:12px;cursor:pointer;transition:all .15s;}
-.time-slot:hover{border-color:var(--blue);background:var(--surf);}
-.time-slot.selected{background:var(--blue);border-color:var(--blue);color:#fff;}
+/* ═══════════════════════════════════════════════════
+   MOTION SYSTEM — aurora, grain, micro-interactions
+   ═══════════════════════════════════════════════════ */
+
+/* --- Aurora mesh gradient background --- */
+body::before{
+  content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(67,147,229,.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 75%, rgba(106,90,205,.12) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(204,121,167,.08) 0%, transparent 50%);
+  animation: auroraShift 18s ease-in-out infinite alternate;
+  will-change: opacity;
+}
+body.light::before{
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(67,147,229,.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 75%, rgba(106,90,205,.07) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 50%, rgba(204,121,167,.05) 0%, transparent 50%);
+}
+@keyframes auroraShift{
+  0%{opacity:.7;filter:hue-rotate(0deg);}
+  50%{opacity:1;filter:hue-rotate(15deg);}
+  100%{opacity:.8;filter:hue-rotate(-10deg);}
+}
+
+/* --- Film grain overlay --- */
+body::after{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:128px 128px;
+  mix-blend-mode:overlay;
+}
+body.light::after{opacity:.025;}
+
+/* --- Cursor spotlight --- */
+.cursor-glow{
+  position:fixed;width:320px;height:320px;border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle,rgba(67,147,229,.07) 0%,transparent 70%);
+  transform:translate(-50%,-50%);
+  transition:opacity .3s;
+  will-change:transform;
+}
+body.light .cursor-glow{
+  background:radial-gradient(circle,rgba(67,147,229,.05) 0%,transparent 70%);
+}
+
+/* --- Button micro-interactions --- */
+.btn,.nav-btn,.dash-pill,.theme-btn,.cal-nav-btn,.cal-add-btn,.bulk-btn,.vtbtn,.m-save,.m-cancel,.m-del,.opp-back,.opp-tab{
+  transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .2s,background .2s,border-color .2s,color .2s,opacity .2s;
+}
+.btn:hover,.nav-btn:hover,.dash-pill:hover,.theme-btn:hover,.cal-nav-btn:hover,.cal-add-btn:hover,.vtbtn:hover,.m-save:hover,.m-cancel:hover,.m-del:hover{
+  transform:translateY(-1px);
+  box-shadow:0 4px 16px rgba(0,0,0,.18);
+}
+.btn:active,.nav-btn:active,.dash-pill:active,.theme-btn:active,.cal-nav-btn:active,.cal-add-btn:active,.vtbtn:active,.m-save:active,.m-cancel:active,.m-del:active{
+  transform:translateY(0) scale(.97);
+  box-shadow:0 1px 4px rgba(0,0,0,.15);
+  transition-duration:.06s;
+}
+.nav-btn.act-blue,.nav-btn.act-red,.nav-btn.act-yellow,.nav-btn.act-green{
+  box-shadow:0 2px 12px rgba(67,147,229,.25);
+}
+.nav-btn.act-red{box-shadow:0 2px 12px rgba(213,94,0,.25);}
+.nav-btn.act-yellow{box-shadow:0 2px 12px rgba(230,159,0,.25);}
+.nav-btn.act-green{box-shadow:0 2px 12px rgba(0,158,115,.25);}
+
+/* --- Card shine border on hover --- */
+.kcard,.stat,.dash-card,.wl-col,.arch-row,.tbl-row{
+  position:relative;
+  transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .25s,border-color .25s;
+}
+.kcard:hover,.stat:hover,.dash-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 30px rgba(0,0,0,.2);
+}
+body.light .kcard:hover,body.light .stat:hover,body.light .dash-card:hover{
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+/* Gradient shine border */
+.kcard::before,.stat::before,.dash-card::before{
+  content:'';position:absolute;inset:-1.5px;border-radius:inherit;
+  background:linear-gradient(135deg,transparent 30%,rgba(67,147,229,.4) 50%,rgba(106,90,205,.3) 60%,transparent 80%);
+  background-size:300% 300%;
+  opacity:0;z-index:-1;
+  transition:opacity .3s;
+  pointer-events:none;
+}
+.kcard:hover::before,.stat:hover::before,.dash-card:hover::before{
+  opacity:1;
+  animation:shineMove 2s ease infinite;
+}
+@keyframes shineMove{
+  0%{background-position:100% 0%;}
+  50%{background-position:0% 100%;}
+  100%{background-position:100% 0%;}
+}
+
+/* --- Input focus glow --- */
+.srch,.mi,.opp-inp{
+  transition:border-color .2s,box-shadow .2s;
+}
+.srch:focus,.mi:focus,.opp-inp:focus{
+  box-shadow:0 0 0 3px rgba(67,147,229,.15);
+}
+
+/* --- Staggered entrance animations --- */
+@keyframes fadeSlideUp{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeSlideIn{
+  from{opacity:0;transform:translateY(8px) scale(.98);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+.stat,.dash-card{
+  animation:fadeSlideUp .5s cubic-bezier(.22,1,.36,1) both;
+}
+.stat:nth-child(1){animation-delay:.04s;}
+.stat:nth-child(2){animation-delay:.08s;}
+.stat:nth-child(3){animation-delay:.12s;}
+.stat:nth-child(4){animation-delay:.16s;}
+
+/* --- Kanban column entrance --- */
+.kcol{
+  animation:fadeSlideUp .45s cubic-bezier(.22,1,.36,1) both;
+}
+.kcol:nth-child(1){animation-delay:.05s;}
+.kcol:nth-child(2){animation-delay:.10s;}
+.kcol:nth-child(3){animation-delay:.15s;}
+.kcol:nth-child(4){animation-delay:.20s;}
+.kcol:nth-child(5){animation-delay:.25s;}
+
+/* --- Kanban card entrance (set by JS on render) --- */
+.kcard{
+  animation:fadeSlideIn .35s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* --- Board / tab transition --- */
+.board{
+  transition:none;
+}
+.board.on{
+  animation:boardIn .35s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes boardIn{
+  from{opacity:0;transform:translateY(10px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* --- Modal open/close --- */
+.modal-bg{
+  transition:opacity .25s cubic-bezier(.22,1,.36,1);
+  opacity:0;
+}
+.modal-bg.on{
+  opacity:1;
+}
+.modal-box{
+  transition:transform .3s cubic-bezier(.34,1.56,.64,1),opacity .25s;
+  transform:translateY(24px) scale(.96);
+  opacity:0;
+}
+.modal-bg.on .modal-box{
+  transform:translateY(0) scale(1);
+  opacity:1;
+}
+
+/* --- Opportunity fullscreen entrance --- */
+.opp-fs{
+  transition:opacity .25s;
+  opacity:0;
+}
+.opp-fs.on{
+  opacity:1;
+}
+.opp-fs.on .opp-body{
+  animation:fadeSlideUp .35s cubic-bezier(.22,1,.36,1) .08s both;
+}
+
+/* --- Drag feedback --- */
+.kcard.dragging{
+  opacity:.4 !important;
+  transform:rotate(2deg) scale(1.04) !important;
+  box-shadow:0 12px 40px rgba(0,0,0,.35) !important;
+  transition:transform .15s,box-shadow .15s;
+  z-index:100;
+}
+.kcol.drag-over{
+  transition:background .2s,border-color .2s;
+  box-shadow:inset 0 0 20px rgba(67,147,229,.08);
+}
+
+/* --- Scrollbar styling --- */
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px;}
+::-webkit-scrollbar-thumb:hover{background:var(--mut);}
+
+/* --- Kanban progress bar pulse on offer --- */
+.kcard[data-stage=offer] .sf-fill{
+  animation:offerPulse 2.5s ease-in-out infinite;
+}
+@keyframes offerPulse{
+  0%,100%{box-shadow:0 0 4px rgba(0,158,115,.3);}
+  50%{box-shadow:0 0 12px rgba(0,158,115,.6);}
+}
+
+/* --- Reduced motion --- */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-delay:0s !important;
+    transition-duration:.001ms !important;
+  }
+  body::before{animation:none !important;opacity:.8 !important;}
+  .cursor-glow{display:none !important;}
+}
 </style>
 </head>
 <body>
+<div class="cursor-glow" id="cursorGlow"></div>
 
 <!-- HEADER -->
 <div class="hdr">
@@ -458,6 +675,10 @@ textarea.opp-inp{resize:vertical;min-height:90px;}
         <div class="mf"><label>Date Applied</label><input type="date" class="mi" id="mf-date"></div>
       </div>
       <div class="mf"><label>Job URL</label><input class="mi" id="mf-url" type="url" placeholder="https://"></div>
+      <div class="mrow">
+        <div class="mf"><label>Contact Name</label><input class="mi" id="mf-contact" placeholder="e.g. Jane Smith"></div>
+        <div class="mf"><label>Contact Role / Info</label><input class="mi" id="mf-contactRole" placeholder="e.g. Recruiter, jane@co.com"></div>
+      </div>
       <div class="mf"><label>Notes</label><textarea class="mi" id="mf-notes" rows="3" style="resize:vertical"></textarea></div>
       <div class="m-actions">
         <button class="m-cancel" onclick="closeJobModal()">Cancel</button>
@@ -485,77 +706,10 @@ textarea.opp-inp{resize:vertical;min-height:90px;}
           <option value="secondInterview">2nd Interview</option>
           <option value="finalInterview">Final Interview</option>
         </select></div>
-      <div class="mf"><label>Date & Time</label>
-        <input class="mi" type="text" readonly id="int-display" value="Not scheduled" 
-          onclick="openTimePickerForAdd()" style="cursor:pointer" placeholder="Click to set time">
-      </div>
-      <input type="hidden" id="int-dt-value">
+      <div class="mf"><label>Date & Time</label><input type="datetime-local" class="mi" id="int-dt"></div>
       <div class="m-actions">
         <button class="m-cancel" onclick="closeIntModal()">Cancel</button>
         <button class="m-save" onclick="saveInterview()">Add</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ TIME PICKER MODAL ══ -->
-<div class="modal-bg" id="timePickerModal">
-  <div class="modal-box" style="max-width:420px">
-    <div class="modal-hdr">
-      <h2>📅 Schedule Interview</h2>
-      <button class="modal-cls" onclick="closeTimePicker()">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="mf"><label>Date</label>
-        <input type="date" class="mi" id="tp-date">
-      </div>
-      <div class="mf"><label>Time (15 min intervals)</label>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-height:280px;overflow-y:auto;padding:4px">
-          <button class="time-slot" data-time="08:00">8:00 AM</button>
-          <button class="time-slot" data-time="08:15">8:15 AM</button>
-          <button class="time-slot" data-time="08:30">8:30 AM</button>
-          <button class="time-slot" data-time="08:45">8:45 AM</button>
-          <button class="time-slot" data-time="09:00">9:00 AM</button>
-          <button class="time-slot" data-time="09:15">9:15 AM</button>
-          <button class="time-slot" data-time="09:30">9:30 AM</button>
-          <button class="time-slot" data-time="09:45">9:45 AM</button>
-          <button class="time-slot" data-time="10:00">10:00 AM</button>
-          <button class="time-slot" data-time="10:15">10:15 AM</button>
-          <button class="time-slot" data-time="10:30">10:30 AM</button>
-          <button class="time-slot" data-time="10:45">10:45 AM</button>
-          <button class="time-slot" data-time="11:00">11:00 AM</button>
-          <button class="time-slot" data-time="11:15">11:15 AM</button>
-          <button class="time-slot" data-time="11:30">11:30 AM</button>
-          <button class="time-slot" data-time="11:45">11:45 AM</button>
-          <button class="time-slot" data-time="12:00">12:00 PM</button>
-          <button class="time-slot" data-time="12:15">12:15 PM</button>
-          <button class="time-slot" data-time="12:30">12:30 PM</button>
-          <button class="time-slot" data-time="12:45">12:45 PM</button>
-          <button class="time-slot" data-time="13:00">1:00 PM</button>
-          <button class="time-slot" data-time="13:15">1:15 PM</button>
-          <button class="time-slot" data-time="13:30">1:30 PM</button>
-          <button class="time-slot" data-time="13:45">1:45 PM</button>
-          <button class="time-slot" data-time="14:00">2:00 PM</button>
-          <button class="time-slot" data-time="14:15">2:15 PM</button>
-          <button class="time-slot" data-time="14:30">2:30 PM</button>
-          <button class="time-slot" data-time="14:45">2:45 PM</button>
-          <button class="time-slot" data-time="15:00">3:00 PM</button>
-          <button class="time-slot" data-time="15:15">3:15 PM</button>
-          <button class="time-slot" data-time="15:30">3:30 PM</button>
-          <button class="time-slot" data-time="15:45">3:45 PM</button>
-          <button class="time-slot" data-time="16:00">4:00 PM</button>
-          <button class="time-slot" data-time="16:15">4:15 PM</button>
-          <button class="time-slot" data-time="16:30">4:30 PM</button>
-          <button class="time-slot" data-time="16:45">4:45 PM</button>
-          <button class="time-slot" data-time="17:00">5:00 PM</button>
-          <button class="time-slot" data-time="17:15">5:15 PM</button>
-          <button class="time-slot" data-time="17:30">5:30 PM</button>
-          <button class="time-slot" data-time="17:45">5:45 PM</button>
-        </div>
-      </div>
-      <div class="m-actions">
-        <button class="m-cancel" onclick="closeTimePicker()">Cancel</button>
-        <button class="m-save" onclick="confirmTimePicker()">OK</button>
       </div>
     </div>
   </div>
@@ -566,8 +720,8 @@ textarea.opp-inp{resize:vertical;min-height:90px;}
 // CONSTANTS
 // ═══════════════════════════════════════
 const SC = {
-  wishlist:'#94a3b8', applied:'#3b82f6', first:'#f59e0b',
-  second:'#8b5cf6', final:'#ec4899', offer:'#10b981', rejected:'#ef4444'
+  wishlist:'#94a3b8', applied:'#4393E5', first:'#E69F00',
+  second:'#6A5ACD', final:'#CC79A7', offer:'#009E73', rejected:'#D55E00'
 };
 const SL = {
   wishlist:'Wishlist', applied:'Applied', first:'1st Interview',
@@ -594,12 +748,6 @@ let listSF = 'company', listSD = 'asc';
 // Default column order — checkbox col is prepended automatically
 let colOrder = ['company','title','stage','source','qualityScore','salary','ote','dateApplied'];
 let dragColFrom = null;
-
-// Time picker state
-let tpJobId = null;
-let tpField = null;
-let tpSelectedTime = null;
-let tpIsAddModal = false;
 
 // ═══════════════════════════════════════
 // PERSIST
@@ -732,6 +880,7 @@ function buildKCard(j){
     onclick="openOpp(${j.id})">
     <div class="kcard-co">${j.company}</div>
     <div class="kcard-ttl">${j.title||'No title'}</div>
+    ${j.contact?`<div class="kcard-contact">👤 ${j.contact}${j.contactRole?' · '+j.contactRole:''}</div>`:''}
     <div class="kcard-tags">
       ${j.salary?`<span class="kcard-tag">💰 ${fmtMoney(j.salary)}</span>`:''}
       ${qs>0?`<span class="kcard-tag" style="color:var(--yellow)">⭐ ${qs}/100</span>`:''}
@@ -823,7 +972,7 @@ function renderTC(j,col){
     case 'source': return `<div class="tc">${j.source||'–'}</div>`;
     case 'qualityScore': {
       const q=calcQ(j); if(!q) return `<div class="tc"><span style="color:var(--mut)">–</span></div>`;
-      const qc=q>=80?'#10b981':q>=60?'#f59e0b':q>=40?'#8b5cf6':'#94a3b8';
+      const qc=q>=80?'#009E73':q>=60?'#E69F00':q>=40?'#6A5ACD':'#94a3b8';
       return `<div class="tc"><span class="qs-badge" style="background:${qc}">${q}</span></div>`;
     }
     case 'salary': return `<div class="tc">${j.salary?fmtMoney(j.salary):'–'}</div>`;
@@ -938,10 +1087,10 @@ function renderUpcoming(){
   const now=new Date();
   const items=[];
   allJobs.forEach(j=>{
-    [['firstInterview','1st Interview','#f59e0b'],['secondInterview','2nd Interview','#8b5cf6'],['finalInterview','Final Interview','#ec4899']].forEach(([f,l,c])=>{
+    [['firstInterview','1st Interview','#E69F00'],['secondInterview','2nd Interview','#6A5ACD'],['finalInterview','Final Interview','#CC79A7']].forEach(([f,l,c])=>{
       if(j[f]&&new Date(j[f])>now) items.push({date:new Date(j[f]),label:l,company:j.company,color:c,id:j.id});
     });
-    if(j.followUpDate){ const d=new Date(j.followUpDate+'T00:00'); items.push({date:d,label:'Follow-Up',company:j.company,color:'#06b6d4',id:j.id}); }
+    if(j.followUpDate){ const d=new Date(j.followUpDate+'T00:00'); items.push({date:d,label:'Follow-Up',company:j.company,color:'#56B4E9',id:j.id}); }
   });
   items.sort((a,b)=>a.date-b.date);
   const w=document.getElementById('upcomingWrap');
@@ -960,8 +1109,8 @@ function openAddIntModal(){
   document.getElementById('int-search').value='';
   document.getElementById('int-job-id').value='';
   document.getElementById('int-results').style.display='none';
-  document.getElementById('int-dt-value').value='';
-  document.getElementById('int-display').value='Not scheduled';
+  const n=new Date(); n.setMinutes(n.getMinutes()-n.getTimezoneOffset());
+  document.getElementById('int-dt').value=n.toISOString().slice(0,16);
   document.getElementById('intModal').classList.add('on');
 }
 function closeIntModal(){ document.getElementById('intModal').classList.remove('on'); }
@@ -989,16 +1138,10 @@ function selectIntJob(id,co,ttl){
 function saveInterview(){
   const id=parseInt(document.getElementById('int-job-id').value);
   const r=document.getElementById('int-round').value;
-  const dt=document.getElementById('int-dt-value').value;
+  const dt=document.getElementById('int-dt').value;
   if(!id||!dt){ alert('Select a job and time.'); return; }
   const j=allJobs.find(x=>x.id===id);
-  if(j){ 
-    j[r]=dt;
-    // Auto-update stage
-    const stageMap = {firstInterview:'first',secondInterview:'second',finalInterview:'final'};
-    if(stageMap[r]) j.stage = stageMap[r];
-    jobs=[...allJobs]; save(); renderCal(); 
-  }
+  if(j){ j[r]=dt; jobs=[...allJobs]; save(); renderCal(); }
   closeIntModal();
 }
 
@@ -1046,7 +1189,7 @@ function renderDash(){
   const upcoming=allJobs.filter(j=>j.followUpDate&&j.followUpDate>todayStr).length;
   document.getElementById('d-tasks').textContent=past+due;
   document.getElementById('d-tasks-detail').innerHTML=
-    `<span style="color:#ef4444">${past} past due</span> · <span style="color:#f59e0b">${due} today</span> · <span style="color:#3b82f6">${upcoming} upcoming</span>`;
+    `<span style="color:#D55E00">${past} past due</span> · <span style="color:#E69F00">${due} today</span> · <span style="color:#4393E5">${upcoming} upcoming</span>`;
 
   // Salary / OTE
   const sals=allJobs.filter(j=>j.salary).map(j=>parseFloat(parseMoney(j.salary))).filter(n=>n>0);
@@ -1066,10 +1209,10 @@ function renderDash(){
   const w3=allJobs.filter(j=>j.finalInterview).length;
   const w4=allJobs.filter(j=>j.stage==='offer').length;
   const funnel=[
-    {label:'Applied → 1st Interview',n:w1,d:totalApplied,c:'#f59e0b'},
-    {label:'1st → 2nd Interview',n:w2,d:w1,c:'#8b5cf6'},
-    {label:'2nd → Final Interview',n:w3,d:w2,c:'#ec4899'},
-    {label:'Final → Offer',n:w4,d:w3,c:'#10b981'},
+    {label:'Applied → 1st Interview',n:w1,d:totalApplied,c:'#E69F00'},
+    {label:'1st → 2nd Interview',n:w2,d:w1,c:'#6A5ACD'},
+    {label:'2nd → Final Interview',n:w3,d:w2,c:'#CC79A7'},
+    {label:'Final → Offer',n:w4,d:w3,c:'#009E73'},
   ];
   document.getElementById('funnelContainer').innerHTML=funnel.map(f=>{
     const pct=f.d>0?Math.round(f.n/f.d*100):0;
@@ -1089,14 +1232,14 @@ function renderDash(){
         ${SOURCES.map((s,i)=>{
           const pct = Math.round((srcCounts[i]/srcTotal)*100);
           if(!srcCounts[i]) return '';
-          const colors=['#3b82f6','#0a66c2','#10b981','#2164f3','#f59e0b','#8b5cf6','#94a3b8'];
+          const colors=['#4393E5','#0077B6','#009E73','#56B4E9','#E69F00','#6A5ACD','#94a3b8'];
           return `<div style="background:${colors[i]};flex:${srcCounts[i]};display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px">${pct}%</div>`;
         }).join('')}
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px">
         ${SOURCES.map((s,i)=>{
           if(!srcCounts[i]) return '';
-          const colors=['#3b82f6','#0a66c2','#10b981','#2164f3','#f59e0b','#8b5cf6','#94a3b8'];
+          const colors=['#4393E5','#0077B6','#009E73','#56B4E9','#E69F00','#6A5ACD','#94a3b8'];
           return `<div style="display:flex;align-items:center;gap:5px">
             <div style="width:12px;height:12px;border-radius:3px;background:${colors[i]}"></div>
             <span style="color:var(--mut)">${s}</span>
@@ -1106,7 +1249,8 @@ function renderDash(){
       </div>
     </div>
   ` : '<p style="color:var(--mut);font-size:13px;margin-top:12px">No source data yet</p>';
-  document.getElementById('srcChart').innerHTML = srcHTML;
+  document.querySelector('#srcChart').parentElement.innerHTML = 
+    '<h3>Applications by Source</h3>' + srcHTML;
 
   // Interviews by Source STACKED bar chart
   const intCounts = SOURCES.map(s=>allJobs.filter(j=>j.source===s&&['first','second','final'].includes(j.stage)).length);
@@ -1117,14 +1261,14 @@ function renderDash(){
         ${SOURCES.map((s,i)=>{
           const pct = Math.round((intCounts[i]/intTotal)*100);
           if(!intCounts[i]) return '';
-          const colors=['#3b82f6','#0a66c2','#10b981','#2164f3','#f59e0b','#8b5cf6','#94a3b8'];
+          const colors=['#4393E5','#0077B6','#009E73','#56B4E9','#E69F00','#6A5ACD','#94a3b8'];
           return `<div style="background:${colors[i]};flex:${intCounts[i]};display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12px">${pct}%</div>`;
         }).join('')}
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:12px">
         ${SOURCES.map((s,i)=>{
           if(!intCounts[i]) return '';
-          const colors=['#3b82f6','#0a66c2','#10b981','#2164f3','#f59e0b','#8b5cf6','#94a3b8'];
+          const colors=['#4393E5','#0077B6','#009E73','#56B4E9','#E69F00','#6A5ACD','#94a3b8'];
           const responseRate = srcCounts[i] > 0 ? Math.round((intCounts[i]/srcCounts[i])*100) : 0;
           return `<div style="display:flex;align-items:center;gap:5px">
             <div style="width:12px;height:12px;border-radius:3px;background:${colors[i]}"></div>
@@ -1136,7 +1280,8 @@ function renderDash(){
       </div>
     </div>
   ` : '<p style="color:var(--mut);font-size:13px;margin-top:12px">No interview data yet</p>';
-  document.getElementById('intChart').innerHTML = intHTML;
+  document.querySelector('#intChart').parentElement.innerHTML = 
+    '<h3>Interviews by Source</h3>' + intHTML;
   // Stage chart
   const stages=['applied','first','second','final','offer','rejected'];
   drawBarChart('stgChart',
@@ -1216,7 +1361,7 @@ function renderOppFS(){
 
   const color=SC[j.stage]||'#94a3b8';
   const qs=calcQ(j);
-  const qc=qs>=80?'#10b981':qs>=60?'#f59e0b':qs>=40?'#8b5cf6':'#94a3b8';
+  const qc=qs>=80?'#009E73':qs>=60?'#E69F00':qs>=40?'#6A5ACD':'#94a3b8';
 
   const starsHTML=(field,val)=>[1,2,3,4,5].map(n=>`<span class="star${(parseInt(j[field])||0)>=n?' on':''}" onclick="setQ(${j.id},'${field}',${n})">★</span>`).join('');
 
@@ -1225,16 +1370,17 @@ function renderOppFS(){
       <div>
         <div class="opp-name">${j.company}</div>
         <div class="opp-role">${j.title||'No title'} ${j.location?'· '+j.location:''}</div>
+        ${j.contact?`<div style="margin-top:8px;font-size:13px;color:var(--cyan)">👤 ${j.contact}${j.contactRole?' — '+j.contactRole:''}</div>`:''}
       </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        ${qs>0?`<span style="background:${qc};color:#fff;padding:6px 14px;border-radius:16px;font-size:14px;font-weight:800">${qs}/100</span>`:''}
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        ${qs>0?`<span style="background:${qc};color:#fff;padding:7px 16px;border-radius:16px;font-size:14px;font-weight:800">${qs}/100</span>`:''}
         <span class="stage-badge" style="background:${color}">${SL[j.stage]}</span>
       </div>
     </div>
 
     <div class="opp-sec">
       <div class="opp-sec-title">Basic Info</div>
-      <div class="opp-g2">
+      <div class="opp-g3">
         <div class="opp-fld"><div class="opp-lbl">Company</div><input class="opp-inp" value="${esc(j.company)}" onchange="updOpp(${j.id},'company',this.value)"></div>
         <div class="opp-fld"><div class="opp-lbl">Job Title</div><input class="opp-inp" value="${esc(j.title||'')}" onchange="updOpp(${j.id},'title',this.value)"></div>
         <div class="opp-fld"><div class="opp-lbl">Location</div><input class="opp-inp" value="${esc(j.location||'')}" onchange="updOpp(${j.id},'location',this.value)"></div>
@@ -1252,6 +1398,15 @@ function renderOppFS(){
     </div>
 
     <div class="opp-sec">
+      <div class="opp-sec-title">Contact / Reference</div>
+      <div class="opp-g3">
+        <div class="opp-fld"><div class="opp-lbl">Contact Name</div><input class="opp-inp" value="${esc(j.contact||'')}" placeholder="e.g. Jane Smith" onchange="updOpp(${j.id},'contact',this.value)"></div>
+        <div class="opp-fld"><div class="opp-lbl">Role / Title</div><input class="opp-inp" value="${esc(j.contactRole||'')}" placeholder="e.g. Recruiter, HR Director" onchange="updOpp(${j.id},'contactRole',this.value)"></div>
+        <div class="opp-fld"><div class="opp-lbl">Contact Info</div><input class="opp-inp" value="${esc(j.contactInfo||'')}" placeholder="e.g. email, phone, LinkedIn" onchange="updOpp(${j.id},'contactInfo',this.value)"></div>
+      </div>
+    </div>
+
+    <div class="opp-sec">
       <div class="opp-sec-title">Compensation</div>
       <div class="opp-g2">
         <div class="opp-fld"><div class="opp-lbl">Base Salary</div>
@@ -1265,27 +1420,12 @@ function renderOppFS(){
 
     <div class="opp-sec">
       <div class="opp-sec-title">Timeline & Interviews</div>
-      <div class="opp-g2">
+      <div class="opp-g3">
         <div class="opp-fld"><div class="opp-lbl">Date Applied</div><input class="opp-inp" type="date" value="${j.dateApplied||''}" onchange="updOpp(${j.id},'dateApplied',this.value)"></div>
-        <div class="opp-fld"><div class="opp-lbl" style="color:#06b6d4">Follow-Up Date</div><input class="opp-inp" type="date" value="${j.followUpDate||''}" onchange="updOpp(${j.id},'followUpDate',this.value)" style="border-color:#06b6d433"></div>
-        <div class="opp-fld">
-          <div class="opp-lbl" style="color:#f59e0b">1st Interview</div>
-          <input class="opp-inp" type="text" readonly value="${j.firstInterview?formatInterviewTime(j.firstInterview):'Not scheduled'}" 
-            onclick="openTimePicker(${j.id},'firstInterview','${j.firstInterview||''}')" 
-            style="border-color:#f59e0b33;cursor:pointer" placeholder="Click to schedule">
-        </div>
-        <div class="opp-fld">
-          <div class="opp-lbl" style="color:#8b5cf6">2nd Interview</div>
-          <input class="opp-inp" type="text" readonly value="${j.secondInterview?formatInterviewTime(j.secondInterview):'Not scheduled'}" 
-            onclick="openTimePicker(${j.id},'secondInterview','${j.secondInterview||''}')" 
-            style="border-color:#8b5cf633;cursor:pointer" placeholder="Click to schedule">
-        </div>
-        <div class="opp-fld">
-          <div class="opp-lbl" style="color:#ec4899">Final Interview</div>
-          <input class="opp-inp" type="text" readonly value="${j.finalInterview?formatInterviewTime(j.finalInterview):'Not scheduled'}" 
-            onclick="openTimePicker(${j.id},'finalInterview','${j.finalInterview||''}')" 
-            style="border-color:#ec489933;cursor:pointer" placeholder="Click to schedule">
-        </div>
+        <div class="opp-fld"><div class="opp-lbl" style="color:#56B4E9">Follow-Up Date</div><input class="opp-inp" type="date" value="${j.followUpDate||''}" onchange="updOpp(${j.id},'followUpDate',this.value)" style="border-color:rgba(86,180,233,.2)"></div>
+        <div class="opp-fld"><div class="opp-lbl" style="color:#E69F00">1st Interview</div><input class="opp-inp" type="datetime-local" value="${j.firstInterview||''}" onchange="updOpp(${j.id},'firstInterview',this.value)" style="border-color:rgba(230,159,0,.2)"></div>
+        <div class="opp-fld"><div class="opp-lbl" style="color:#6A5ACD">2nd Interview</div><input class="opp-inp" type="datetime-local" value="${j.secondInterview||''}" onchange="updOpp(${j.id},'secondInterview',this.value)" style="border-color:rgba(106,90,205,.2)"></div>
+        <div class="opp-fld"><div class="opp-lbl" style="color:#CC79A7">Final Interview</div><input class="opp-inp" type="datetime-local" value="${j.finalInterview||''}" onchange="updOpp(${j.id},'finalInterview',this.value)" style="border-color:rgba(204,121,167,.2)"></div>
       </div>
     </div>
 
@@ -1303,7 +1443,7 @@ function renderOppFS(){
 
     <div class="opp-sec">
       <div class="opp-sec-title">Notes</div>
-      <textarea class="opp-inp" rows="5" placeholder="Notes, contacts, next steps…" onchange="updOpp(${j.id},'notes',this.value)">${esc(j.notes||'')}</textarea>
+      <textarea class="opp-inp" rows="6" placeholder="Notes, contacts, next steps…" onchange="updOpp(${j.id},'notes',this.value)">${esc(j.notes||'')}</textarea>
     </div>
   `;
 }
@@ -1314,97 +1454,7 @@ function updOpp(id, field, value){
   const j=allJobs.find(x=>x.id===id); if(!j) return;
   j[field]=value;
   jobs=[...allJobs]; save(); renderAll();
-  if(['stage','salary','ote','qRevops','qComp','qMat','qGrowth','qCulture','company'].includes(field)) renderOppFS();
-}
-
-// Format interview time for display
-function formatInterviewTime(dt){
-  if(!dt) return '';
-  const d = new Date(dt);
-  return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) + ' at ' + 
-    d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
-}
-
-// Open time picker for opportunity
-function openTimePicker(jobId, field, currentValue){
-  tpJobId = jobId;
-  tpField = field;
-  tpSelectedTime = null;
-  tpIsAddModal = false;
-  
-  // Set date to today or current value
-  const d = currentValue ? new Date(currentValue) : new Date();
-  document.getElementById('tp-date').value = d.toISOString().split('T')[0];
-  
-  // Clear all selected time slots
-  document.querySelectorAll('.time-slot').forEach(btn=>btn.classList.remove('selected'));
-  
-  // If there's a current value, pre-select the time slot
-  if(currentValue){
-    const time = d.toTimeString().slice(0,5);
-    const btn = document.querySelector(`.time-slot[data-time="${time}"]`);
-    if(btn){ btn.classList.add('selected'); tpSelectedTime = time; }
-  }
-  
-  document.getElementById('timePickerModal').classList.add('on');
-}
-
-// Open time picker from Add Interview modal
-function openTimePickerForAdd(){
-  tpIsAddModal = true;
-  tpSelectedTime = null;
-  
-  const d = new Date();
-  document.getElementById('tp-date').value = d.toISOString().split('T')[0];
-  document.querySelectorAll('.time-slot').forEach(btn=>btn.classList.remove('selected'));
-  document.getElementById('timePickerModal').classList.add('on');
-}
-
-// Time slot click handler
-document.addEventListener('click', function(e){
-  if(e.target.classList.contains('time-slot')){
-    document.querySelectorAll('.time-slot').forEach(btn=>btn.classList.remove('selected'));
-    e.target.classList.add('selected');
-    tpSelectedTime = e.target.dataset.time;
-  }
-});
-
-function closeTimePicker(){
-  document.getElementById('timePickerModal').classList.remove('on');
-  tpJobId = null; tpField = null; tpSelectedTime = null; tpIsAddModal = false;
-}
-
-function confirmTimePicker(){
-  const date = document.getElementById('tp-date').value;
-  if(!date || !tpSelectedTime){ alert('Please select a date and time.'); return; }
-  
-  const datetime = `${date}T${tpSelectedTime}`;
-  
-  if(tpIsAddModal){
-    // Update Add Interview modal
-    document.getElementById('int-dt-value').value = datetime;
-    document.getElementById('int-display').value = formatInterviewTime(datetime);
-    closeTimePicker();
-  } else {
-    // Update opportunity and auto-change stage
-    const j = allJobs.find(x=>x.id===tpJobId);
-    if(j){
-      j[tpField] = datetime;
-      
-      // AUTO-UPDATE STAGE based on interview field
-      const stageMap = {
-        firstInterview: 'first',
-        secondInterview: 'second',
-        finalInterview: 'final'
-      };
-      if(stageMap[tpField]){
-        j.stage = stageMap[tpField];
-      }
-      
-      jobs=[...allJobs]; save(); renderAll(); renderOppFS();
-    }
-    closeTimePicker();
-  }
+  if(['stage','salary','ote','qRevops','qComp','qMat','qGrowth','qCulture','company','contact','contactRole','contactInfo'].includes(field)) renderOppFS();
 }
 
 function setQ(id, field, val){
@@ -1427,7 +1477,7 @@ function openAddModal(){
   editingId=null;
   document.getElementById('jobModalTitle').textContent='Add Job';
   document.getElementById('mf-delBtn').style.display='none';
-  ['mf-co','mf-ttl','mf-loc','mf-url','mf-notes'].forEach(id=>document.getElementById(id).value='');
+  ['mf-co','mf-ttl','mf-loc','mf-url','mf-notes','mf-contact','mf-contactRole'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('mf-stg').value='applied';
   document.getElementById('mf-src').value='';
   document.getElementById('mf-sal').value='';
@@ -1449,6 +1499,8 @@ function openEditModal(id){
   document.getElementById('mf-ote').value=j.ote?fmtMoney(j.ote):'';
   document.getElementById('mf-date').value=j.dateApplied||'';
   document.getElementById('mf-url').value=j.url||'';
+  document.getElementById('mf-contact').value=j.contact||'';
+  document.getElementById('mf-contactRole').value=j.contactRole||'';
   document.getElementById('mf-notes').value=j.notes||'';
   document.getElementById('jobModal').classList.add('on');
 }
@@ -1469,6 +1521,8 @@ function saveJob(){
     ote:parseMoney(oteRaw),
     dateApplied:document.getElementById('mf-date').value,
     url:document.getElementById('mf-url').value.trim(),
+    contact:document.getElementById('mf-contact').value.trim(),
+    contactRole:document.getElementById('mf-contactRole').value.trim(),
     notes:document.getElementById('mf-notes').value.trim(),
   };
   if(editingId){
@@ -1490,11 +1544,12 @@ function delFromModal(){
 // CSV
 // ═══════════════════════════════════════
 function exportCSV(){
-  const h=['Company','Title','Location','Stage','Source','Salary','OTE','Date Applied','1st Interview','2nd Interview','Final Interview','Follow-Up Date','URL','Notes','Q-RevOps','Q-Comp','Q-Maturity','Q-Growth','Q-Culture'];
+  const h=['Company','Title','Location','Stage','Source','Salary','OTE','Date Applied','1st Interview','2nd Interview','Final Interview','Follow-Up Date','URL','Notes','Q-RevOps','Q-Comp','Q-Maturity','Q-Growth','Q-Culture','Contact','Contact Role'];
   const rows=allJobs.map(j=>[j.company,j.title,j.location,j.stage,j.source,
     j.salary?fmtMoney(j.salary):'',j.ote?fmtMoney(j.ote):'',j.dateApplied,
     j.firstInterview,j.secondInterview,j.finalInterview,j.followUpDate,j.url,
-    (j.notes||'').replace(/"/g,'""'),j.qRevops,j.qComp,j.qMat,j.qGrowth,j.qCulture]);
+    (j.notes||'').replace(/"/g,'""'),j.qRevops,j.qComp,j.qMat,j.qGrowth,j.qCulture,
+    j.contact||'',j.contactRole||'']);
   const csv=h.join(',')+'\n'+rows.map(r=>r.map(c=>`"${c||''}"`).join(',')).join('\n');
   const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
   a.download=`job-tracker-${new Date().toISOString().split('T')[0]}.csv`; a.click();
@@ -1520,7 +1575,8 @@ function importCSV(e){
           stage:flds[3]||'applied',source:flds[4],salary:parseMoney(flds[5]),ote:parseMoney(flds[6]),
           dateApplied:flds[7],firstInterview:flds[8],secondInterview:flds[9],finalInterview:flds[10],
           followUpDate:flds[11],url:flds[12],notes:flds[13],
-          qRevops:flds[14],qComp:flds[15],qMat:flds[16],qGrowth:flds[17],qCulture:flds[18]});
+          qRevops:flds[14],qComp:flds[15],qMat:flds[16],qGrowth:flds[17],qCulture:flds[18],
+          contact:flds[19]||'',contactRole:flds[20]||''});
         cnt++;
       }
     });
@@ -1585,6 +1641,17 @@ function loadDemoData(){
     'Fast-paced startup environment, lots of autonomy',
     'Established company with proven GTM motion'
   ];
+
+  const contactNames = [
+    'Sarah Chen','Michael Torres','Emily Rodriguez','James Wilson','Priya Patel',
+    'David Kim','Rachel Green','Alex Johnson','Maria Santos','Chris Lee',
+    'Jessica Huang','Brandon Miller','Aisha Mohammed','Ryan O\'Brien','Sophia Nguyen'
+  ];
+  const contactRoles = [
+    'Recruiter','Talent Acquisition','Hiring Manager','HR Director','VP of Sales',
+    'Head of RevOps','Senior Recruiter','People Operations','Director of Talent',
+    'Internal Recruiter','Agency Recruiter','Team Lead','Engineering Manager'
+  ];
   
   const demos = [];
   const now = new Date();
@@ -1610,21 +1677,21 @@ function loadDemoData(){
     if(['first','second','final','offer'].includes(stage)){
       const intDate = new Date(dateApplied);
       intDate.setDate(intDate.getDate() + Math.floor(Math.random() * 7) + 3);
-      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,15,30,45][Math.floor(Math.random()*4)], 0, 0);
+      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,30][Math.floor(Math.random()*2)], 0, 0);
       firstInterview = intDate.toISOString().slice(0,16);
     }
     
     if(['second','final','offer'].includes(stage)){
       const intDate = new Date(firstInterview);
       intDate.setDate(intDate.getDate() + Math.floor(Math.random() * 5) + 2);
-      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,15,30,45][Math.floor(Math.random()*4)], 0, 0);
+      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,30][Math.floor(Math.random()*2)], 0, 0);
       secondInterview = intDate.toISOString().slice(0,16);
     }
     
     if(['final','offer'].includes(stage)){
       const intDate = new Date(secondInterview);
       intDate.setDate(intDate.getDate() + Math.floor(Math.random() * 5) + 2);
-      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,15,30,45][Math.floor(Math.random()*4)], 0, 0);
+      intDate.setHours(9 + Math.floor(Math.random() * 8), [0,30][Math.floor(Math.random()*2)], 0, 0);
       finalInterview = intDate.toISOString().slice(0,16);
     }
     
@@ -1662,6 +1729,8 @@ function loadDemoData(){
       followUpDate,
       url: `https://jobs.example.com/${companies[Math.floor(Math.random() * companies.length)].toLowerCase().replace(/[^a-z]/g,'')}`,
       notes: Math.random() > 0.3 ? notes[Math.floor(Math.random() * notes.length)] : '',
+      contact: Math.random() > 0.25 ? contactNames[Math.floor(Math.random() * contactNames.length)] : '',
+      contactRole: Math.random() > 0.25 ? contactRoles[Math.floor(Math.random() * contactRoles.length)] : '',
       qRevops,
       qComp,
       qMat,
@@ -1686,6 +1755,48 @@ function toggleTheme(){
   document.getElementById('themeBtnEl').textContent=l?'🌙':'☀️';
   localStorage.setItem('theme',l?'light':'dark');
 }
+
+// ═══════════════════════════════════════
+// MOTION SYSTEM — cursor glow + card stagger
+// ═══════════════════════════════════════
+(function(){
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(mq.matches) return; // respect reduced motion
+
+  // --- Cursor spotlight (throttled) ---
+  const glow = document.getElementById('cursorGlow');
+  if(glow){
+    let ticking = false;
+    document.addEventListener('pointermove', e=>{
+      if(ticking) return;
+      ticking = true;
+      requestAnimationFrame(()=>{
+        glow.style.transform = `translate(${e.clientX - 160}px, ${e.clientY - 160}px)`;
+        ticking = false;
+      });
+    },{passive:true});
+  }
+
+  // --- Card stagger on kanban render ---
+  const origRenderKanban = window.renderKanban;
+  window.renderKanban = function(){
+    origRenderKanban.apply(this, arguments);
+    document.querySelectorAll('.kcol').forEach(col=>{
+      col.querySelectorAll('.kcard').forEach((card,i)=>{
+        card.style.animationDelay = `${0.03 * i}s`;
+      });
+    });
+  };
+
+  // --- Dashboard card stagger ---
+  const origRenderDash = window.renderDash;
+  window.renderDash = function(){
+    origRenderDash.apply(this, arguments);
+    document.querySelectorAll('.dash-card').forEach((c,i)=>{
+      c.style.animationDelay = `${0.04 * i}s`;
+    });
+  };
+})();
 
 // ═══════════════════════════════════════
 // INIT
